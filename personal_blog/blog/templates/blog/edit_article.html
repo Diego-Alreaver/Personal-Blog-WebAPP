@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Add New Article{% endblock %}
+
+{% block content %}
+
+    <h1>Edit Article</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+    <a href="{% url 'dashboard' %}">Back to dashboard</a>
+    
+{% endblock %}

@@ -1,0 +1,288 @@
+/* General styles */
+html, body {
+    height: 100%; 
+    margin: 0; 
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex; 
+    flex-direction: column; 
+}
+
+a {
+    color: #b80d29;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    flex: 1;
+}
+
+header {
+    background: #5b0992;
+    color: #ffffff;  /* Cambiado el color del texto a blanco para mejor contraste */
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 10px; 
+}
+
+header nav a {
+    color: #ffffff; 
+    margin-left: 20px; 
+}
+
+header nav a:hover {
+    text-decoration: underline; 
+}
+
+
+footer {
+    background: #5b0992;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin-top: auto;
+}
+
+.back-to-home {
+    margin-top: 20px; 
+    display: inline-block;
+}
+
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between; /* Para alinear el título y el botón */
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 10px 0;
+    border-bottom: 2px solid #ccc; /* Línea separadora */
+}
+
+/* Título del dashboard */
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+/* Botón de añadir artículo */
+.btn-right {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-right:hover {
+    background-color: #45a049;
+}
+
+/* Lista de artículos */
+.article-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0; /* Espaciado para separar la lista del encabezado */
+}
+
+/* Cada artículo */
+.article-item {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    display: flex; /* Cambiado a flex para que los elementos internos se alineen */
+    justify-content: space-between; /* Espacia los elementos en los extremos */
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+.article-content {
+    display: flex; /* Flexbox para alinear el título y el botón de eliminar */
+    justify-content: space-between; /* Separa el título y el botón */
+    width: 100%; /* Asegura que use el ancho completo del artículo */
+}
+
+
+.article-item:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Título del artículo */
+.article-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #35424a;
+    margin-right: auto;
+}
+
+.article-title:hover {
+    text-decoration: underline;
+}
+
+/* Botón de eliminar */
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 15px;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+.delete-form {
+    display: inline-block;
+}
+
+.publication-date {
+    font-size: 0.9em; /* Tamaño de fuente más pequeño para la fecha */
+    color: #777; /* Un color gris para que sea menos prominente */
+    margin-left: 10px; /* Espaciado a la izquierda */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-right {
+        margin-top: 10px;
+    }
+}
+
+
+
+/* Diseño de artículos */
+
+/* Estilo general para la página de detalles del artículo */
+.articled-detail {
+    max-width: 800px; /* Limita el ancho máximo del contenido */
+    margin: 20px auto; /* Centra el contenido en la página */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo claro para el contenido */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.articled-title {
+    font-size: 2em; /* Tamaño de fuente grande para el título */
+    color: #35424a; /* Color del título */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.publication-date {
+    font-size: 0.9em; /* Tamaño de fuente más pequeño para la fecha */
+    color: #777; /* Color gris para la fecha */
+    margin-bottom: 20px; /* Espacio debajo de la fecha */
+}
+
+.articled-content {
+    font-size: 1.1em; /* Tamaño de fuente para el contenido del artículo */
+    line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+    color: #333; /* Color del texto */
+}
+
+.back-to-home {
+    display: inline-block; /* Asegura que el enlace se comporte como un botón */
+    margin-top: 20px; /* Espacio encima del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.back-to-home:hover {
+    background-color: #45a049; /* Cambio de color al hacer hover */
+}
+
+
+
+
+/* Estilo general para la página de agregar artículo */
+
+.add-article-title {
+    font-size: 2em; /* Tamaño de fuente grande para el título */
+    color: #35424a; /* Color del texto del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    text-align: center; /* Centra el título en el contenedor */
+}
+
+.add-article-container {
+    max-width: 600px; /* Limita el ancho del formulario */
+    margin: 20px auto; /* Centra el contenido */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo claro para el formulario */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.article-form {
+    display: flex; /* Utiliza flexbox para organizar los elementos */
+    flex-direction: column; /* Coloca los elementos en columna */
+}
+
+.article-form p {
+    margin: 10px 0; /* Espaciado entre los campos del formulario */
+}
+
+.submit-button {
+    background-color: #4CAF50; /* Color de fondo verde para el botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño de fuente del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.submit-button:hover {
+    background-color: #45a049; /* Cambio de color al hacer hover */
+}
+
+.back-to-dashboard {
+    display: inline-block; /* Asegura que el enlace se comporte como un botón */
+    margin-top: 20px; /* Espacio encima del enlace */
+    color: #35424a; /* Color del texto del enlace */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+.back-to-dashboard:hover {
+    color: #b80d29; /* Color al hacer hover */
+}

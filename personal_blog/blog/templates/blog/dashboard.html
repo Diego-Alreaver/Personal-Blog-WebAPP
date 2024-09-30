@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="dashboard-header">
+        <h1>Dashboard</h1>
+        <a href="{% url 'add_article' %}" class="btn-right">Add New Article</a>
+    </div>
+
+    <ul class="article-list">
+        {% for article in articles %}
+        <li class="article-item">
+            <div class="article-content">
+                <a href="{% url 'edit_article' article.id %}" class="article-title">{{ article.title }}</a>
+                <form action="{% url 'delete_article' article.id %}" method="POST" class="delete-form">
+                    {% csrf_token %}
+                    <button type="submit" class="delete-button">Delete</button>
+                </form>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

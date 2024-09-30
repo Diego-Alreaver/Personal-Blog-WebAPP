@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Add New Article{% endblock %}
+
+{% block content %}
+    <div class="add-article-container">
+        <h1 class="add-article-title">Add New Article</h1>
+        <form method="POST" class="article-form">
+            {% csrf_token %}
+            {{ form.as_p }} 
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+        <a href="{% url 'dashboard' %}" class="back-to-dashboard">Back to Dashboard</a>
+    </div>
+{% endblock %}

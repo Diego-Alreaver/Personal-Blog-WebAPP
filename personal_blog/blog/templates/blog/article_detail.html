@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+    <div class="articled-detail">
+        <h1 class="articled-title">{{ article.title }}</h1>
+        <p class="publication-date">Published on: {{ article.publication_date }}</p>
+        <div class="articled-content">{{ article.content }}</div>
+        <a href="{% url 'home' %}" class="back-to-home">Back to Home</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="dashboard-header">
+        <h1>Articles</h1>
+    </div>
+    <ul class="article-list">
+        {% for article in articles %}
+            <li class="article-item">
+                <div class="article-content">
+                    <a href="{% url 'article_detail' article.id %}" class="article-title">{{ article.title }}</a>
+                    <span class="publication-date">Published on: {{ article.publication_date }}</span>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
