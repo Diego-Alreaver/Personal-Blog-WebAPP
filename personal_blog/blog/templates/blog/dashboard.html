@@ -10,8 +10,11 @@
         {% for article in articles %}
         <li class="article-item">
             <div class="article-content">
-                <a href="{% url 'edit_article' article.id %}" class="article-title">{{ article.title }}</a>
-                <a href="{% url 'delete_article' article.id %}" class="delete-button">Delete</a> <!-- Ahora redirige a la confirmación -->
+                <div class="article-info">
+                    <a href="{% url 'edit_article' article.id %}" class="article-title">{{ article.title }}</a>
+                    <span class="publication-date">Published on: {{ article.publication_date }}</span>
+                </div>
+                <a href="{% url 'delete_article' article.id %}" class="delete-button">Delete</a>
             </div>
         </li>
         {% endfor %}

@@ -75,7 +75,7 @@ def delete_article_view(request, article_id):
 
     if request.method == 'POST':
         article.delete()
-        return redirect('dashboard')  # Redirige al dashboard después de eliminar
+        return redirect('dashboard')  
 
     return render(request, 'blog/delete_article.html', {'article': article})
 
