@@ -49,7 +49,7 @@ def add_article(request):
         if form.is_valid():
             article = form.save(commit=False)  
             article.publication_date = timezone.now()  
-            article.save()  # Ahora guarda
+            article.save()  
             return redirect('dashboard')
     else:
         form = ArticleForm()
@@ -70,12 +70,12 @@ def edit_article(request, article_id):
     return render(request, 'blog/edit_article.html', {'form': form, 'article': article})
 
 
-#vista para eliminar
-@login_required
-def delete_article(request, article_id):
+def delete_article_view(request, article_id):
     article = get_object_or_404(Article, id=article_id)
+
     if request.method == 'POST':
         article.delete()
-        return redirect('dashboard')
+        return redirect('dashboard')  # Redirige al dashboard después de eliminar
+
     return render(request, 'blog/delete_article.html', {'article': article})
 

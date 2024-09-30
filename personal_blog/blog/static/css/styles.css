@@ -111,7 +111,7 @@ footer {
     padding: 15px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
-    display: flex; /* Cambiado a flex para que los elementos internos se alineen */
+    display: flex; 
     justify-content: space-between; /* Espacia los elementos en los extremos */
     align-items: center; /* Centra verticalmente el contenido */
 }
@@ -119,7 +119,7 @@ footer {
 .article-content {
     display: flex; /* Flexbox para alinear el título y el botón de eliminar */
     justify-content: space-between; /* Separa el título y el botón */
-    width: 100%; /* Asegura que use el ancho completo del artículo */
+    width: 100%; 
 }
 
 
@@ -160,9 +160,9 @@ footer {
 }
 
 .publication-date {
-    font-size: 0.9em; /* Tamaño de fuente más pequeño para la fecha */
-    color: #777; /* Un color gris para que sea menos prominente */
-    margin-left: 10px; /* Espaciado a la izquierda */
+    font-size: 0.9em; 
+    color: #777; 
+    margin-left: 10px; 
 }
 
 /* Responsivo */
@@ -203,7 +203,7 @@ footer {
 }
 
 .publication-date {
-    font-size: 0.9em; /* Tamaño de fuente más pequeño para la fecha */
+    font-size: 0.9em;
     color: #777; /* Color gris para la fecha */
     margin-bottom: 20px; /* Espacio debajo de la fecha */
 }
@@ -215,7 +215,7 @@ footer {
 }
 
 .back-to-home {
-    display: inline-block; /* Asegura que el enlace se comporte como un botón */
+    display: inline-block; 
     margin-top: 20px; /* Espacio encima del botón */
     padding: 10px 20px; /* Espaciado interno del botón */
     background-color: #4CAF50; /* Color de fondo verde */
@@ -285,4 +285,44 @@ footer {
 
 .back-to-dashboard:hover {
     color: #b80d29; /* Color al hacer hover */
+}
+
+
+/* Contenedor para la página de eliminar artículo */
+.delete-article-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Botón de confirmar eliminación */
+.confirm-delete-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; 
+}
+
+/* Botón de cancelar */
+.cancel-delete-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+/* Añadir espaciado extra entre los botones */
+.delete-article-container button,
+.delete-article-container a {
+    display: block;  /* Los hace ocupar el 100% del ancho de su contenedor */
+    margin: 10px auto;  /* Centra los botones y añade un margen de 10px arriba y abajo */
+    max-width: 200px;  /* Limita el ancho máximo de los botones */
 }

@@ -11,10 +11,7 @@
         <li class="article-item">
             <div class="article-content">
                 <a href="{% url 'edit_article' article.id %}" class="article-title">{{ article.title }}</a>
-                <form action="{% url 'delete_article' article.id %}" method="POST" class="delete-form">
-                    {% csrf_token %}
-                    <button type="submit" class="delete-button">Delete</button>
-                </form>
+                <a href="{% url 'delete_article' article.id %}" class="delete-button">Delete</a> <!-- Ahora redirige a la confirmación -->
             </div>
         </li>
         {% endfor %}
