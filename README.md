@@ -17,3 +17,7 @@ This section is restricted to me (admin), allowing for article management:
 
 - ### Authentication
 For the admin section, I implemented authentication using Django's built-in features. I employed the `@login_required` decorator to ensure that only authorized users can access the admin pages, providing a secure way to manage the articles.
+
+- ### Front page
+
+![image](https://github.com/user-attachments/assets/6ad07335-f710-43ed-b1c6-0770a6e294e6)
